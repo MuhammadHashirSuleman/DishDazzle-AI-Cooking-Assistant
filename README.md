@@ -61,27 +61,27 @@ Experience the modern and intuitive user interface of DishDazzle:
 
 ### Main Application Interface
 ![Main Interface](src/desktop_ui_images/1.png)
-*DishDazzle's clean and modern main interface*
+
 
 ### Recipe Discovery
 ![Recipe Discovery](src/desktop_ui_images/2.png)
-*Smart recipe search and discovery features*
+
 
 ### AI Cooking Assistant
 ![AI Assistant](src/desktop_ui_images/3.png)
-*Real-time AI cooking assistance and chat*
+
 
 ### Recipe Management
 ![Recipe Management](src/desktop_ui_images/4.png)
-*Organize and manage your recipe collection*
+
 
 ### Grocery List Integration
 ![Grocery Lists](src/desktop_ui_images/5.png)
-*Smart grocery list generation and management*
+
 
 ### Settings & Configuration
 ![Settings](src/desktop_ui_images/6.png)
-*Easy configuration and API setup*
+
 
 </div>
 
