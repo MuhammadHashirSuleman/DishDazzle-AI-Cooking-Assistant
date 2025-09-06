@@ -1,0 +1,114 @@
+ Prompt for Trae AI IDE
+
+Collaborate with me to build DishDazzle, an AI-powered desktop recipe assistant, with 99%+ accuracy, exceptional performance, and a modern, intuitive user experience. Follow best practices: PEP 8-compliant code, modular design, error handling, logging (`logging` module), unit tests (`pytest`), secure API key storage, and accessibility (keyboard navigation). Add amazing features: dark/light mode toggle, API response caching, recipe import/export as JSON, threading for non-blocking API calls, and progress indicators. Ensure fast iterations, clear commit messages, and a scalable folder structure.
+
+ Project Overview and Instructions
+Follow these specifications exactly unless I instruct otherwise. The project is a desktop app using Python 3.x, PyQt5, SQLite, and OpenAI GPT API (GPT-3.5-turbo or better). Prompt me securely for my OpenAI API key.
+
+1. Project Summary
+   DishDazzle is an intelligent desktop app transforming home cooking by helping users discover recipes based on available ingredients. It features a recipe database, dynamic grocery list manager, and an AI chatbot powered by OpenAI GPT API for real-time cooking assistance, creative recipe ideas, and ingredient substitutions.
+
+2. Project Goals & Objectives
+   - Build a robust, intuitive desktop app for recipe management and discovery.
+   - Integrate OpenAI GPT API for context-aware assistance.
+   - Design a user-friendly interface for meal planning and cooking.
+   - Implement a smart grocery list that auto-updates based on recipes and pantry.
+   - Create an AI chatbot for real-time cooking support.
+
+3. Core Modules & Functional Requirements
+   - Module 1: Recipe Management
+     - Browsable/searchable recipe library with placeholder image URLs.
+     - Recipes include ingredient list (JSON), instructions (JSON), cooking time, difficulty (Easy/Medium/Hard).
+     - Save favorite recipes for quick access.
+   - Module 2: Smart Recipe Suggestions (GPT API)
+     - UI for inputting available ingredients.
+     - Backend sends ingredients to GPT API to:
+       - Suggest matching database recipes.
+       - Generate creative recipes if no match (e.g., "Flour, eggs, sugar → crepes").
+       - Suggest substitutions (e.g., "No butter? Use margarine.").
+   - Module 3: AI Cooking Assistant (Chatbot)
+     - Interactive chatbot panel for:
+       - Step-by-step recipe guidance.
+       - Ingredient substitutions.
+       - Nutritional/cooking queries.
+     - GPT API processes natural language queries.
+   - Module 4: Grocery List Management
+     - Dedicated grocery list section.
+     - Auto-add missing ingredients based on pantry and selected recipe.
+     - Manual add/remove items, export/copy list.
+   - Module 5: Real-time Step-by-Step Cooking Guide
+     - Display recipe steps clearly.
+     - Allow contextual AI tips for current step (e.g., "Best way to chop onions?").
+
+4. System Architecture & Workflow
+   - User Interaction: PyQt5 GUI.
+   - Application Logic: Python backend for inputs (button clicks, text entry).
+   - Database: SQLite for recipes, favorites, pantry (JSON for lists).
+   - API Calls: Use `openai` library for GPT API requests, handle rate limits with retries.
+   - Response Handling: Parse JSON API responses.
+   - UI Update: Dynamically update GUI.
+   - Initialize with 10 sample recipes (e.g., Pasta Aglio e Olio, Caprese Salad) with JSON ingredients/steps.
+
+5. Tools & Technologies
+   - Language: Python 3.x.
+   - GUI: PyQt5 (fallback to Tkinter if issues).
+   - Database: SQLite (serverless).
+   - API: OpenAI GPT API (GPT-3.5-turbo or better).
+   - API Communication: `openai` library.
+   - IDE: Simulate VS Code/PyCharm.
+   - Libraries: `pyqt5`, `openai`, `pytest` (via `requirements.txt`).
+
+6. Evaluation & Deliverables
+   - Functional desktop app (source code + PyInstaller instructions).
+   - Commented, structured code with unit tests.
+   - Project report (architecture, design, challenges, user manual).
+   - Support live demo (error-free).
+
+7. Special Notes
+   - Prompt for OpenAI API key (free tier, usage limits).
+   - Best practices: Use `logging`, JSON config for API key, `QMessageBox` for errors, cache API responses (dict-based).
+   - Amazing features:
+     - Dark/light mode toggle.
+     - Recipe import/export as JSON.
+     - Optional: Voice-to-text for ingredients (`speechrecognition` if feasible).
+     - Threading for non-blocking API calls.
+     - Unit tests for DB/API functions.
+
+ Folder Structure
+```
+DishDazzle/
+├── src/
+│   ├── __init__.py
+│   ├── main.py          # App entry point
+│   ├── database.py      # SQLite functions
+│   ├── ui.py            # PyQt5 GUI components
+│   ├── api.py           # OpenAI API integration
+│   ├── utils.py         # Logging, config, helpers
+│   └── models.py        # Data models (e.g., Recipe)
+├── tests/
+│   ├── __init__.py
+│   ├── test_database.py
+│   ├── test_api.py
+│   └── test_ui.py
+├── data/
+│   └── dishdazzle.db   # SQLite DB
+├── config/
+│   └── config.json      # API key
+├── docs/
+│   ├── report.md        # Project report
+│   └── user_manual.md   # User guide
+├── requirements.txt     # pyqt5\nopenai\npytest
+├── .gitignore           # .pyc, __pycache__, dist/, build/, *.db
+├── README.md            # Setup instructions
+└── build_exe.sh         # pyinstaller --onefile src/main.py
+```
+
+ Collaboration Workflow
+- Initialize folder structure and file skeletons.
+- Respond to my inputs step-by-step (e.g., "Implement Recipe Management" → provide code + feedback prompt).
+- Suggest commit messages (e.g., "feat: Add Recipe Management module").
+- Test code internally, report outputs/errors.
+- Provide runnable code blocks per iteration.
+- Suggest fixes for issues (e.g., API errors).
+
+Ready to start on DishDazzle. What module should we implement first?

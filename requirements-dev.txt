@@ -1,0 +1,45 @@
+# Development dependencies for DishDazzle
+# Install with: pip install -r requirements-dev.txt
+
+# Core dependencies (also install main requirements.txt)
+-r requirements.txt
+
+# Testing frameworks
+pytest>=7.0.0                    # Testing framework
+pytest-qt>=4.2.0                # PyQt5 testing support
+pytest-cov>=4.0.0               # Test coverage reporting
+pytest-mock>=3.10.0             # Mock support for testing
+pytest-asyncio>=0.21.0          # Async testing support
+
+# Code formatting and linting
+black>=23.0.0                   # Code formatter
+isort>=5.12.0                   # Import sorting
+flake8>=6.0.0                   # Linting
+flake8-docstrings>=1.7.0        # Docstring linting
+flake8-import-order>=0.18.2     # Import order checking
+mypy>=1.0.0                     # Type checking
+
+# Documentation
+sphinx>=5.0.0                   # Documentation generator
+sphinx-rtd-theme>=1.2.0         # ReadTheDocs theme
+sphinx-autoapi>=2.1.0           # Auto API documentation
+
+# Development tools
+pre-commit>=3.0.0               # Git hooks
+bumpversion>=0.6.0              # Version bumping
+twine>=4.0.0                    # Package publishing
+
+# Debugging and profiling
+pdb++>=0.10.3                   # Enhanced debugger
+memory-profiler>=0.60.0         # Memory usage profiling
+line-profiler>=4.0.0            # Line-by-line profiling
+
+# Build tools
+build>=0.10.0                   # Build backend
+wheel>=0.40.0                   # Wheel building
+setuptools>=65.0.0              # Setup tools
+
+# Additional development utilities
+pip-tools>=6.13.0               # Dependency management
+tox>=4.0.0                      # Testing in multiple environments
+coverage[toml]>=7.0.0            # Coverage configuration support
